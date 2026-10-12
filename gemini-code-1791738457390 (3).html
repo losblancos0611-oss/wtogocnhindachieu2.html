@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vai Trò Tiêu Cực Của WTO Trong Quan Hệ Quốc Tế - Nhóm 6</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      --bg-dark: #1c0d0a;
+      --bg-card: #25120e;
+      --bg-light: #d1d1d6;
+      --card-white: #f5f5f7;
+      --text-main: #f5f5f7;
+      --text-sub: #a1a1a6;
+      --text-dark: #1d1d1f;
+      --text-dark-sub: #515154;
+      --accent: #d25338;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --apple-ease: cubic-bezier(0.25, 1, 0.5, 1);
+      --bounce-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    header.apple-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 48px;
+      background-color: rgba(209, 209, 214, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      color: #1d1d1f;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .apple-nav .nav-logo {
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+    }
+
+    .apple-nav .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .apple-nav .nav-links a {
+      text-decoration: none;
+      color: #1d1d1f;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .apple-nav .nav-links a:hover {
+      color: #86868b;
+    }
+
+    .view-screen {
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 100%;
+      min-height: calc(100vh - 48px);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.98) translateY(20px);
+      transition: opacity 0.6s var(--apple-ease), transform 0.6s var(--apple-ease), visibility 0.6s;
+      pointer-events: none;
+    }
+
+    .view-screen.active {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* SCREEN 1: LANDING HERO (100% VISUAL MATCH ẢNH 1) */
+    #landing-screen {
+      display: flex;
+      min-height: calc(100vh - 48px);
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      display: flex;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .hero-left {
+      flex: 1.1;
+      padding: 100px 60px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 2;
+      background: linear-gradient(90deg, #180907 70%, rgba(24, 9, 7, 0.4) 100%);
+    }
+
+    .hero-eyebrow {
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e5e5ea;
+      margin-bottom: 8px;
+    }
+
+    .hero-title-wto {
+      font-size: 132px;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      margin-bottom: 8px;
+      background: linear-gradient(180deg, #ffffff 40%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subheading {
+      font-size: 38px;
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #d1d1d6;
+      margin-bottom: 48px;
+      max-width: 580px;
+    }
+
+    .btn-apple-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+      padding: 18px 42px;
+      border-radius: 980px;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      transition: transform 0.3s var(--apple-ease), background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-apple-pill:hover {
+      background-color: #ffffff;
+      transform: scale(1.04) translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    .btn-apple-pill:active {
+      transform: scale(0.98);
+    }
+
+    .hero-right {
+      flex: 0.9;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #180907;
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #180907 0%, transparent 40%),
+                  radial-gradient(circle at center, transparent 30%, rgba(24, 9, 7, 0.8) 100%);
+      z-index: 1;
+    }
+
+    .hero-image-wto {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(115%) brightness(85%);
+      transform: scale(1.02);
+      transition: transform 1.2s var(--apple-ease);
+    }
+
+    /* SCREEN 2: GRID OVERVIEW (100% VISUAL MATCH ẢNH 2) */
+    #grid-screen {
+      background-color: var(--bg-light);
+      padding: 60px 48px 100px;
+      min-height: calc(100vh - 48px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .grid-header-bar {
+      width: 100%;
+      max-width: 1180px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      color: #1d1d1f;
+    }
+
+    .grid-title-lead {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      width: 100%;
+      max-width: 1180px;
+    }
+
+    .apple-topic-card {
+      background-color: var(--bg-dark);
+      border-radius: 28px;
+      padding: 40px 32px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+      transform: translateY(0);
+      transition: transform 0.4s var(--bounce-ease), box-shadow 0.4s ease, background-color 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .apple-topic-card:hover {
+      transform: translateY(-14px) scale(1.025);
+      box-shadow: 0 28px 50px rgba(0, 0, 0, 0.45);
+      background-color: #27120d;
+    }
+
+    .apple-topic-card:active {
+      transform: translateY(-4px) scale(0.99);
+    }
+
+    .card-top-row {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 16px;
+    }
+
+    .card-num {
+      font-size: 64px;
+      line-height: 0.9;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+    }
+
+    .card-title-main {
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #d1d1d6;
+      font-weight: 400;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .card-arrow-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    /* SCREEN 3: DETAIL VIEW (100% VISUAL MATCH ẢNH 3) */
+    #detail-screen {
+      background-color: var(--bg-dark);
+      padding: 0 0 120px;
+      min-height: calc(100vh - 48px);
+    }
+
+    .detail-hero-header {
+      position: relative;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .detail-hero-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28, 13, 10, 0.7) 0%, rgba(28, 13, 10, 0.95) 100%);
+      z-index: 1;
+    }
+
+    .detail-hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      padding: 0 24px;
+    }
+
+    .watermark-large-num {
+      font-size: 140px;
+      line-height: 0.8;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.25);
+      letter-spacing: -0.04em;
+      margin-bottom: -10px;
+    }
+
+    .detail-main-heading {
+      font-size: 46px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .detail-body-container {
+      max-width: 1040px;
+      margin: -40px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .detail-content-card {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      border-radius: 36px;
+      padding: 64px 60px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-actions-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
+
+    .btn-back-grid {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      border: 1px solid #86868b;
+      padding: 10px 22px;
+      border-radius: 980px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back-grid:hover {
+      background-color: var(--text-dark);
+      color: #ffffff;
+    }
+
+    .keyword-pill-tag {
+      background-color: rgba(210, 83, 56, 0.15);
+      color: #b0361e;
+      padding: 6px 16px;
+      border-radius: 980px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .sapo-box {
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+      padding: 24px 28px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      border-left: 5px solid var(--accent);
+    }
+
+    .section-block {
+      margin-bottom: 48px;
+    }
+
+    .section-block-title {
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-block-title::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background-color: rgba(0,0,0,0.08);
+    }
+
+    .detail-text-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #333336;
+    }
+
+    .detail-text-list li {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .detail-text-list li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--accent);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .speech-script-card {
+      background: linear-gradient(135deg, #27120d 0%, #180907 100%);
+      color: #f5f5f7;
+      border-radius: 24px;
+      padding: 32px;
+      margin: 40px 0;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .speech-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f98b74;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .speech-text {
+      font-size: 17px;
+      line-height: 1.7;
+      font-style: italic;
+      color: #e5e5ea;
+    }
+
+    .conclusion-callout {
+      padding: 24px 32px;
+      background-color: #e9e9eb;
+      border-radius: 18px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .detail-nav-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .btn-nav-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--text-dark);
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 980px;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-nav-step:hover {
+      background-color: #000000;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 1024px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-title-wto {
+        font-size: 96px;
+      }
+      .hero-subheading {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header.apple-nav {
+        padding: 0 24px;
+      }
+      .hero-container {
+        flex-direction: column;
+      }
+      .hero-left {
+        padding: 60px 24px 40px;
+      }
+      .hero-title-wto {
+        font-size: 72px;
+      }
+      .hero-subheading {
+        font-size: 22px;
+        margin-bottom: 32px;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .detail-content-card {
+        padding: 40px 24px;
+      }
+      .watermark-large-num {
+        font-size: 90px;
+      }
+      .detail-main-heading {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="apple-nav">
+    <div class="nav-logo" onclick="switchView('landing')">NHÓM 6</div>
+    <ul class="nav-links">
+      <li><a onclick="switchView('landing')">Home</a></li>
+      <li><a onclick="switchView('grid')">Key Issues</a></li>
+      <li><a onclick="window.open('https://www.wto.org', '_blank')">Source</a></li>
+    </ul>
+  </header>
+
+  <main id="landing-screen" class="view-screen active">
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Vai trò tiêu cực của</div>
+        <h1 class="hero-title-wto">WTO</h1>
+        <div class="hero-subheading">Trong quan hệ quốc tế</div>
+        <button class="btn-apple-pill" onclick="switchView('grid')">
+          Tìm hiểu thêm <span>→</span>
+        </button>
+      </div>
+      <div class="hero-right">
+        <img class="hero-image-wto" 
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Centre_William_Rappard_%281%29.jpg/1280px-Centre_William_Rappard_%281%29.jpg" 
+             alt="WTO Headquarters Centre William Rappard Geneva">
+      </div>
+    </div>
+  </main>
+
+  <section id="grid-screen" class="view-screen">
+    <div class="grid-header-bar">
+      <h2 class="grid-title-lead">Tổng Quan 6 Vấn Đề Tiêu Cực Của WTO</h2>
+      <button class="btn-back-grid" onclick="switchView('landing')">← Quay lại trang chủ</button>
+    </div>
+    
+    <div class="cards-grid">
+      <article class="apple-topic-card" onclick="openTopic(1)">
+        <div class="card-top-row">
+          <span class="card-num">01</span>
+          <h3 class="card-title-main">Gây Bất Bình Đẳng</h3>
+        </div>
+        <p class="card-desc">Có vai trò điều phối thương mại toàn cầu nhưng bị chi phối bởi các nước lớn</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+
+      <article class="apple-topic-card" onclick="openTopic(2)">
+        <div class="card-top-row">
+          <span class="card-num">02</span>
+          <h3 class="card-title-main">Hạn Chế Pháp Lý</h3>
+        </div>
+        <p class="card-desc">Thúc đẩy hội nhập kinh tế nhưng làm hạn chế chủ quyền pháp lý quốc gia</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+
+      <article class="apple-topic-card" onclick="openTopic(3)">
+        <div class="card-top-row">
+          <span class="card-num">03</span>
+          <h3 class="card-title-main">Giải Quyết Tranh Chấp</h3>
+        </div>
+        <p class="card-desc">Cơ chế giải quyết tranh chấp còn khá nhiều bất cập và tốn kém tài chính</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+
+      <article class="apple-topic-card" onclick="openTopic(4)">
+        <div class="card-top-row">
+          <span class="card-num">04</span>
+          <h3 class="card-title-main">Khủng Hoảng Thương Mại</h3>
+        </div>
+        <p class="card-desc">Có vai trò ổn định kinh tế toàn cầu nhưng không kiểm soát được khủng hoảng thương mại</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+
+      <article class="apple-topic-card" onclick="openTopic(5)">
+        <div class="card-top-row">
+          <span class="card-num">05</span>
+          <h3 class="card-title-main">Bất Ổn Kinh Tế</h3>
+        </div>
+        <p class="card-desc">Thúc đẩy tự do thương mại nhưng làm gia tăng bất ổn cho các nền kinh tế yếu</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+
+      <article class="apple-topic-card" onclick="openTopic(6)">
+        <div class="card-top-row">
+          <span class="card-num">06</span>
+          <h3 class="card-title-main">Gia Tăng Phụ Thuộc</h3>
+        </div>
+        <p class="card-desc">Mở rộng cơ hội thương mại toàn cầu nhưng làm gia tăng sự phụ thuộc vào thị trường quốc tế</p>
+        <div class="card-arrow-indicator">Xem chi tiết <span>→</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="detail-screen" class="view-screen">
+    <div class="detail-hero-header" id="detail-hero-bg">
+      <div class="detail-hero-content">
+        <div class="watermark-large-num" id="detail-number-label">01</div>
+        <h2 class="detail-main-heading" id="detail-title-label">GÂY RA BẤT BÌNH ĐẲNG</h2>
+      </div>
+    </div>
+
+    <div class="detail-body-container">
+      <div class="detail-content-card">
+        <div class="nav-actions-top">
+          <button class="btn-back-grid" onclick="switchView('grid')">✕ Quay lại danh mục</button>
+          <span class="keyword-pill-tag" id="detail-keyword">Bất cân xứng quyền lực</span>
+        </div>
+
+        <div class="sapo-box" id="detail-sapo"></div>
+
+        <div id="detail-dynamic-content"></div>
+
+        <div class="speech-script-card">
+          <span class="speech-label">🎤 Lời Dẫn Dành Cho Thuyết Trình</span>
+          <p class="speech-text" id="detail-speech"></p>
+        </div>
+
+        <div class="conclusion-callout" id="detail-conclusion"></div>
+
+        <div class="detail-nav-footer">
+          <button class="btn-nav-step" id="btn-prev-topic" onclick="navigateTopic(-1)">← Chủ đề trước</button>
+          <button class="btn-nav-step" id="btn-next-topic" onclick="navigateTopic(1)">Chủ đề tiếp theo →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const topicData = {
+      1: {
+        num: "01",
+        title: "GÂY RA BẤT BÌNH ĐẲNG",
+        keyword: "Bất bình đẳng quyền lực & Đa phương bế tắc",
+        sapo: "Trong WTO, theo các nguyên tắc nền tảng, mọi thành viên đều được đối xử như nhau và được hưởng quy chế MFN và NT. Tuy nhiên trên thực tế, các nước đang phát triển phải chịu sự đối xử bất công, bị ép sản xuất các mặt hàng và chịu mức thuế chưa thực sự phù hợp, khiến các nền kinh tế vốn xuất khẩu hàng sơ chế và lao động giản đơn rơi vào tình trạng bất lợi kéo dài.",
+        sections: [
+          {
+            title: "Sự Bất Bình Đẳng Quyền Lực",
+            items: [
+              "<strong>Ưu thế của các nước phát triển (Mỹ, EU, Nhật Bản):</strong> Sở hữu tiềm lực kinh tế, tài chính dồi dào cùng đội ngũ chuyên gia, luật sư quốc tế hùng hậu; dễ dàng áp đặt luật lệ và bảo vệ lợi ích riêng trong các cuộc đàm phán.",
+              "<strong>Thế yếu của các nước đang phát triển:</strong> Thiếu nguồn lực tài chính để duy trì phái đoàn thường trực tại Geneva; thiếu chuyên gia am hiểu sâu về luật và kinh tế quốc tế khiến tiếng nói bị lấn lướt.",
+              "<strong>Gánh nặng và áp lực gánh chịu:</strong> Bị ép mở cửa thị trường và cắt giảm thuế làm sụt giảm nguồn thu ngân sách; phải gánh các tiêu chuẩn khắt khe về môi trường, lao động, sở hữu trí tuệ; đối mặt nguy cơ trừng phạt kinh tế nếu không đáp ứng đúng luật do nước giàu đặt ra."
+            ]
+          },
+          {
+            title: "Bế Tắc Đàm Phán & Phân Mảnh Thương Mại",
+            items: [
+              "<strong>Sự bế tắc của hệ thống đa phương:</strong> Bất đồng sâu sắc về lợi ích giữa các nước giàu và nghèo khiến các cuộc đàm phán rơi vào bế tắc hoàn toàn, tiêu biểu là sự thất bại của Vòng đàm phán Doha (2001 - 2008).",
+              "<strong>Nguyên nhân thất bại Vòng Doha:</strong> Xung đột gay gắt về việc Mỹ và EU không chịu từ bỏ trợ cấp nông nghiệp lớn; bế tắc về Cơ chế Tự vệ Đặc biệt (SSM) giữa Mỹ và Ấn Độ; mâu thuẫn giữa các siêu cường cũ và nền kinh tế mới nổi (Mỹ ép Trung Quốc mở cửa sâu hơn); nguyên tắc 'thỏa thuận trọn gói' (single undertaking) biến mọi mâu thuẫn nhỏ thành lực cản làm sập toàn bộ tiến trình.",
+              "<strong>Nguy cơ phân mảnh thương mại:</strong> Thất bại của WTO buộc các nước ồ ạt quay sang ký FTA song phương và khu vực. Điều này tạo ra mạng lưới 'bát mì spaghetti' về quy tắc xuất xứ chồng chéo, làm tăng chi phí tuân thủ và khiến các nước nghèo càng khó bảo vệ quyền lợi."
+            ]
+          },
+          {
+            title: "Sự Hỗ Trợ Thiếu Thực Tiễn & Mang Tính Hình Thức",
+            items: [
+              "<strong>Nặng lý thuyết, xa rời thực tế:</strong> Các khóa đào tạo của WTO quá phức tạp, đề xuất giải pháp công nghệ cao mà không tính đến năng lực tài chính và kỹ thuật của địa phương.",
+              "<strong>Thiếu vốn đầu tư hạ tầng:</strong> Ngân sách hỗ trợ xây dựng kho bãi, trung tâm logistics và phòng kiểm định chất lượng quá hạn chế.",
+              "<strong>Minh chứng điển hình:</strong> Dù là quốc gia sản xuất cà phê hàng đầu, nông dân Ethiopia vẫn bế tắc trước tiêu chuẩn quốc tế do các chương trình của WTO nặng lý luận, thiếu hướng dẫn thực hành và thiếu vốn đầu tư hạ tầng kiểm định chất lượng."
+            ]
+          }
+        ],
+        speech: "Hạn chế lớn nhất của WTO chính là sự mất cân bằng quyền lực. Các nước giàu sở hữu nguồn lực tài chính và đội ngũ luật sư hùng hậu để áp đặt các quy định có lợi cho họ. Trong khi đó, các nước đang phát triển thậm chí không đủ kinh phí duy trì phái đoàn ở trụ sở Geneva hay thuê chuyên gia. Kết quả là họ bị ép mở cửa thị trường, sụt giảm ngân sách và đối mặt với các trừng phạt kinh tế nếu không đáp ứng được các tiêu chuẩn quá sức.",
+        conclusion: "Bình đẳng về mặt nguyên tắc chỉ là hình thức nếu các quốc gia không có sự tương đồng về nguồn lực thực thi và năng lực đàm phán trên bàn cờ kinh tế quốc tế."
+      },
+      2: {
+        num: "02",
+        title: "HẠN CHẾ PHÁP LÝ",
+        keyword: "Ràng buộc pháp lý & Quyền tự quyết y tế",
+        sapo: "Khi gia nhập WTO, các quốc gia phải cam kết mức thuế quan trần và tuân thủ các hiệp định ràng buộc. Điều này thu hẹp đáng kể không gian điều hành chính sách công và hạn chế quyền can thiệp bảo hộ nền sản xuất nội địa.",
+        sections: [
+          {
+            title: "Ràng Buộc Biểu Cam Kết Thuế Quan",
+            items: [
+              "Các quốc gia cam kết mức thuế quan tối đa đối với hàng hóa nhập khẩu; do đó, khi muốn bảo vệ sản xuất trong nước, các chính phủ không được tự do nâng mức thuế.",
+              "<strong>Ví dụ ngành thép Hoa Kỳ (2002):</strong> Khi ngành thép nội địa gặp khó khăn do cạnh tranh nhập khẩu, chính quyền Mỹ áp thuế bổ sung từ 8% đến 30%. Tuy nhiên, biện pháp này bị các đối tác phản đối và WTO phán quyết vi phạm quy định quốc tế, buộc Mỹ phải dỡ bỏ vào tháng 12/2003.",
+              "Nếu một quốc gia áp dụng biện pháp bảo hộ trái quy định, họ sẽ bị kiện qua Cơ chế Giải quyết Tranh chấp (DSU) và đối mặt với các biện pháp trả đũa thương mại tương đương."
+            ]
+          },
+          {
+            title: "Hiệp Định TRIPS & Rào Cản Tiếp Cận Thuốc Men Giá Rẻ",
+            items: [
+              "Hiệp định TRIPS thiết lập các tiêu chuẩn tối thiểu về bảo hộ quyền sở hữu trí tuệ trên phạm vi toàn cầu, áp dụng nguyên tắc tối huệ quốc không phân biệt đối xử.",
+              "Quy định này trực tiếp cản trở khả năng tiếp cận thuốc men giá rẻ và đe dọa sức khỏe cộng đồng tại các quốc gia đang phát triển.",
+              "<strong>Ví dụ Luật Sáng chế Ấn Độ (2005):</strong> Trước khi gia nhập WTO, Luật Sáng chế 1970 của Ấn Độ chỉ bảo hộ quy trình chứ không bảo hộ sản phẩm dược, cho phép sản xuất thuốc generic giá rẻ phục vụ người nghèo. Dưới sức ép của Điều 27 TRIPS và vụ kiện từ Hoa Kỳ tại WTO, Ấn Độ đã thua kiện và buộc phải sửa toàn bộ luật vào năm 2005 để công nhận bằng sáng chế sản phẩm dược phẩm, làm tăng mạnh giá thuốc điều trị."
+            ]
+          }
+        ],
+        speech: "Có thể thấy, WTO luôn hướng tới sự bình đẳng và tự do thương mại, nhưng điều này đồng nghĩa với việc các quốc gia phải đánh đổi một phần quyền tự quyết chính sách kinh tế và y tế công cộng. Trường hợp Ấn Độ buộc phải sửa luật bằng sáng chế dược phẩm theo sức ép của WTO là minh chứng rõ nét cho thấy lợi ích của các tập đoàn đa quốc gia nhiều khi được đặt lên trên sức khỏe của người dân nghèo.",
+        conclusion: "Các cam kết pháp lý quốc tế của WTO đã thu hẹp không gian chính sách phát triển vốn từng được các quốc gia công nghiệp phát triển sử dụng thành công trong lịch sử."
+      },
+      3: {
+        num: "03",
+        title: "GIẢI QUYẾT TRANH CHẤP",
+        keyword: "Bất cập DSU & Khủng hoảng phúc thẩm",
+        sapo: "Cơ chế Giải quyết Tranh chấp (DSU) của WTO được coi là trung tâm bảo vệ quyền lợi thành viên, nhưng trên thực tế quy trình này cực kỳ tốn kém, kéo dài và đang rơi vào tình trạng tê liệt thể chế nghiêm trọng.",
+        sections: [
+          {
+            title: "Quy Trình Tốn Kém & Sức Ép Đàm Phán Bất Đối Xứng",
+            items: [
+              "Việc thuê tư vấn pháp lý, chuẩn bị hồ sơ kinh tế lượng và theo đuổi các phiên xét xử tại Geneva gây tốn kém hàng chục triệu USD, biến DSU thành 'cuộc chơi đắt đỏ' của các nước giàu.",
+              "<strong>Cuộc chiến Boeing - Airbus (2004 - 2021):</strong> Tranh chấp kéo dài 17 năm tiêu tốn hàng trăm triệu USD chi phí luật sư, kéo theo các mức thuế trừng phạt lẫn nhau lên tới 7,5 tỷ USD của Mỹ và 4 tỷ USD của EU, làm tổn hại nghiêm trọng đến cả ngành rượu vang và nông sản của hai bên bờ Đại Tây Dương.",
+              "<strong>Đàm phán TPP (2010 - 2015):</strong> Mỹ đã sử dụng quyền tiếp cận thị trường khổng lồ để ép các nước nhỏ như Việt Nam, Peru chấp nhận điều khoản 'TRIPS-plus' (độc quyền dữ liệu thử nghiệm thuốc sinh học 8 năm), ngăn cản thuốc generic sinh học giá rẻ."
+            ]
+          },
+          {
+            title: "Cơ Quan Phúc Thẩm (Appellate Body) Bị Tê Liệt Hoàn Toàn",
+            items: [
+              "Hoa Kỳ liên tục sử dụng quyền phủ quyết bổ nhiệm thẩm phán mới (bắt đầu từ thời Obama và leo thang đỉnh điểm thời Trump), khiến Cơ quan Phúc thẩm chỉ còn 1 thành viên và chính thức ngừng hoạt động từ ngày 11/12/2019.",
+              "Mỹ biện minh rằng Cơ quan Phúc thẩm lạm quyền tư pháp, tự ý tạo luật mới làm tổn hại công cụ phòng vệ của Mỹ và vi phạm quy định xét xử trong 90 ngày.",
+              "Lỗ hổng này tạo điều kiện cho các nước lớn thực hiện chiến thuật 'kháng cáo vào hư không' (appealing into the void) để trì hoãn vĩnh viễn việc thi hành nghĩa vụ thương mại, vô hiệu hóa hoàn toàn cơ chế thực thi công lý của WTO."
+            ]
+          }
+        ],
+        speech: "Cơ chế giải quyết tranh chấp của WTO tưởng chừng là công cụ bảo vệ lẽ phải, nhưng lại là một cuộc chơi tốn kém mà chỉ các nước giàu mới có đủ lực tham gia. Tệ hơn nữa, khi Hoa Kỳ đơn phương phong tỏa bổ nhiệm thẩm phán từ năm 2019, toàn bộ hệ thống phúc thẩm đã bị tê liệt, biến các phán quyết thương mại trở thành những bản án không thể thi hành.",
+        conclusion: "Sự tê liệt của Cơ quan Phúc thẩm chứng minh tính dễ tổn thương của các thiết chế tài phán đa phương khi một siêu cường đơn phương quyết định đứng ngoài luật chơi chung."
+      },
+      4: {
+        num: "04",
+        title: "KHỦNG HOẢNG THƯƠNG MẠI",
+        keyword: "Giới hạn điều tiết thương mại toàn cầu",
+        sapo: "WTO góp phần tạo ra môi trường thương mại dựa trên quy tắc và hạn chế những hành động đơn phương. Tuy nhiên, tổ chức này không có quyền điều hành nền kinh tế thế giới và không thể ngăn chặn mọi cuộc khủng hoảng, xung đột hay làn sóng bảo hộ.",
+        sections: [
+          {
+            title: "Bản Chất Thể Chế & Giới Hạn Quản Trị",
+            items: [
+              "WTO tạo ra khuôn khổ quy tắc chung và cơ chế tham vấn nhằm hạn chế bất định trong thương mại quốc tế.",
+              "Tuy nhiên, WTO không phải là một chính phủ toàn cầu, không trực tiếp kiểm soát chính sách tiền tệ, tài khóa, chiến tranh hay quyết định áp thuế đơn phương của từng nước.",
+              "Khi cạnh tranh địa chính trị gia tăng, các quốc gia có thể ưu tiên an ninh kinh tế và lợi ích chiến lược hơn cam kết hợp tác thương mại đa phương."
+            ]
+          },
+          {
+            title: "Dẫn Chứng Thực Tiễn Về Giới Hạn Của WTO",
+            items: [
+              "<strong>Cơ chế phúc thẩm đình trệ:</strong> Theo thống kê của WTO, tính đến tháng 12/2024 có tới 31 vụ kháng cáo đang bị đình trệ tại Cơ quan Phúc thẩm do các vị trí hết nhiệm kỳ không được bổ nhiệm thay thế.",
+              "<strong>Dự báo thương mại 2025 giảm mạnh:</strong> Ngày 16/4/2025, WTO dự báo khối lượng thương mại hàng hóa toàn cầu sẽ giảm 0,2% do làn sóng thuế quan và bất định chính sách thương mại gia tăng.",
+              "<strong>Infographic so sánh thẩm quyền:</strong> WTO CÓ THỂ thiết lập quy tắc, tạo diễn đàn đàm phán, giám sát chính sách và hỗ trợ hòa giải; nhưng KHÔNG THỂ TRỰC TIẾP buộc các quốc gia ngừng xung đột, ngăn chặn mọi biện pháp bảo hộ hay điều hành nền kinh tế quốc gia."
+            ]
+          }
+        ],
+        speech: "Những quy tắc thương mại chung được xây dựng nhằm duy trì trật tự và hạn chế xung đột kinh tế. Tuy nhiên, khi khủng hoảng xảy ra, liệu WTO có đủ khả năng ngăn các quốc gia ưu tiên lợi ích nội địa, kể cả khi những quyết định đó ảnh hưởng đến dòng chảy thương mại quốc tế? Thực tế cho thấy WTO có thể giảm bất định bằng quy tắc chung, nhưng không thể loại bỏ mâu thuẫn quyền lực trong một trật tự quốc tế vẫn do các nhà nước chi phối.",
+        conclusion: "WTO chỉ là khuôn khổ điều phối chứ không thể đóng vai trò người cứu trợ cuối cùng trước các cuộc khủng hoảng địa chính trị và làn sóng bảo hộ toàn cầu."
+      },
+      5: {
+        num: "05",
+        title: "BẤT ỔN KINH TẾ",
+        keyword: "Bất cân xứng lợi ích thương mại",
+        sapo: "Mở cửa thương mại giúp các nền kinh tế tiếp cận thị trường, vốn và công nghệ. Nhưng đối với những quốc gia có năng lực sản xuất hạn chế, mức độ phụ thuộc cao vào xuất khẩu hoặc nguyên liệu nhập khẩu có thể khiến các cú sốc bên ngoài lan truyền nhanh hơn.",
+        sections: [
+          {
+            title: "Tự Do Hóa Thương Mại & Sự Tổn Thương Cấu Trúc",
+            items: [
+              "Tự do hóa làm tăng mức độ phơi nhiễm trước những biến động nhu cầu, giá cả và chính sách thương mại của các đối tác lớn.",
+              "Những nền kinh tế phụ thuộc vào một vài mặt hàng xuất khẩu, thị trường hoặc chuỗi cung ứng có thể rất dễ bị tổn thương trước biến động bên ngoài.",
+              "Các doanh nghiệp nhỏ nội địa gặp nhiều khó khăn khi phải cạnh tranh trực tiếp về năng suất, công nghệ và chi phí với các doanh nghiệp quy mô lớn toàn cầu."
+            ]
+          },
+          {
+            title: "Số Liệu & Bằng Chứng UNCTAD / WTO",
+            items: [
+              "<strong>95/143 nền kinh tế đang phát triển:</strong> Được UNCTAD ghi nhận là phụ thuộc vào hàng hóa cơ bản trong giai đoạn 2021–2023 (khi hơn 60% kim ngạch xuất khẩu là năng lượng, khoáng sản và nông sản).",
+              "<strong>Hơn 80% các nước kém phát triển nhất (LDCs):</strong> Rơi vào nhóm phụ thuộc này, khiến biến động giá quốc tế tác động trực tiếp đến thu ngân sách, việc làm và đời sống xã hội.",
+              "<strong>Rủi ro thuế quan bất đối xứng:</strong> Trong báo cáo tháng 4/2025, WTO cảnh báo các nước kém phát triển gánh chịu rủi ro đặc biệt nặng nề khi các thị trường phát triển gia tăng các rào cản thuế quan."
+            ]
+          }
+        ],
+        speech: "Mở cửa thị trường tạo cơ hội tiếp cận khách hàng toàn cầu, nhưng không phải nền kinh tế nào cũng bước vào cuộc chơi với xuất phát điểm như nhau. Khi chênh lệch về vốn, công nghệ và chính sách hỗ trợ còn quá lớn, tự do thương mại có thể biến những ngành công nghiệp non trẻ thành nạn nhân trực tiếp của sự cạnh tranh bất bình đẳng.",
+        conclusion: "Hội nhập không tự động tạo ra khả năng chống chịu. Một nền kinh tế muốn hưởng lợi bền vững từ thương mại cần chủ động đa dạng hóa cơ cấu sản xuất thay vì phó mặc cho thị trường tự do."
+      },
+      6: {
+        num: "06",
+        title: "GIA TĂNG PHỤ THUỘC",
+        keyword: "Phụ thuộc thương mại & Rủi ro lan truyền",
+        sapo: "Tham gia thương mại toàn cầu giúp các quốc gia mở rộng xuất khẩu, tiếp cận đầu vào và tham gia chuỗi giá trị. Nhưng khi sản xuất phụ thuộc sâu vào thị trường nước ngoài, biến động nhu cầu, gián đoạn logistics hay thay đổi chính sách thương mại có thể nhanh chóng tác động tới nền kinh tế trong nước.",
+        sections: [
+          {
+            title: "Rủi Ro Kép Từ Sự Gắn Kết Toàn Cầu",
+            items: [
+              "<strong>Phụ thuộc vào thị trường xuất khẩu:</strong> Nếu tập trung doanh thu vào một số ít thị trường đối tác, thay đổi về thuế quan hoặc sụt giảm nhu cầu tại đó sẽ giáng đòn mạnh vào sản xuất trong nước.",
+              "<strong>Phụ thuộc vào đầu vào nhập khẩu:</strong> Sự gián đoạn nguồn cung nguyên liệu, linh kiện hoặc năng lượng làm tăng chi phí sản xuất và đình trệ chuỗi giá trị nội địa.",
+              "<strong>Góc nhìn phản biện:</strong> Sự phụ thuộc lẫn nhau mang lại lợi ích quy mô nhưng tiềm ẩn rủi ro lớn nếu thiếu khả năng thay thế đối tác và năng lực ứng phó của nền kinh tế."
+            ]
+          },
+          {
+            title: "Dẫn Chứng Về Mức Độ Tập Trung Thương Mại",
+            items: [
+              "<strong>Chỉ số tập trung xuất khẩu (UNCTADstat 2022–2024):</strong> Bình quân chỉ số này ở các nước kém phát triển nhất (LDCs) là 5,14, cao hơn rất nhiều so với mức 3,26 của các nền kinh tế đang phát triển khác và 2,89 của các nước phát triển (chỉ số càng cao xuất khẩu càng thiếu đa dạng hóa).",
+              "<strong>Rủi ro lan truyền cú sốc:</strong> Báo cáo của UNCTAD chỉ ra rằng đại dịch COVID-19 và xung đột tại Ukraine đã nhanh chóng truyền tác động tiêu cực vào các nước phụ thuộc hàng hóa cơ bản qua giá nguyên liệu, năng lượng và lương thực biến động mạnh.",
+              "Lưu ý: Các sự kiện này là minh chứng cho rủi ro lan truyền trong một thế giới gắn kết, phản ánh sự đánh đổi giữa lợi ích hội nhập và mức độ dễ bị tổn thương kinh tế."
+            ]
+          }
+        ],
+        speech: "Hội nhập càng sâu, các nền kinh tế càng gắn kết chặt chẽ thông qua thị trường xuất khẩu và chuỗi cung ứng. Nhưng chính sự kết nối ấy cũng có thể trở thành điểm yếu: một cú sốc kinh tế, đại dịch hay gián đoạn nguồn cung ở bên ngoài có thể nhanh chóng truyền tác động vào hoạt động sản xuất trong nước.",
+        conclusion: "Mục tiêu không phải là loại bỏ sự phụ thuộc lẫn nhau, mà là xây dựng sự gắn kết có khả năng chống chịu thông qua đa dạng hóa thị trường, nguồn cung và củng cố năng lực sản xuất nội sinh."
+      }
+    };
+
+    let currentTopicId = 1;
+
+    function switchView(viewName) {
+      const views = document.querySelectorAll('.view-screen');
+      views.forEach(v => v.classList.remove('active'));
+
+      if (viewName === 'landing') {
+        document.getElementById('landing-screen').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (viewName === 'grid') {
+        document.getElementById('grid-screen').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (viewName === 'detail') {
+        document.getElementById('detail-screen').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function openTopic(id) {
+      currentTopicId = id;
+      const data = topicData[id];
+      if (!data) return;
+
+      document.getElementById('detail-number-label').innerText = data.num;
+      document.getElementById('detail-title-label').innerText = data.title;
+      document.getElementById('detail-keyword').innerText = data.keyword;
+      document.getElementById('detail-sapo').innerText = data.sapo;
+      document.getElementById('detail-speech').innerText = data.speech;
+      document.getElementById('detail-conclusion').innerHTML = `💡 <strong>Kết Luận:</strong> ${data.conclusion}`;
+
+      const container = document.getElementById('detail-dynamic-content');
+      container.innerHTML = '';
+
+      data.sections.forEach(sec => {
+        const secDiv = document.createElement('div');
+        secDiv.className = 'section-block';
+        
+        let itemsHtml = '';
+        sec.items.forEach(it => {
+          itemsHtml += `<li>${it}</li>`;
+        });
+
+        secDiv.innerHTML = `
+          <h4 class="section-block-title">${sec.title}</h4>
+          <ul class="detail-text-list">${itemsHtml}</ul>
+        `;
+        container.appendChild(secDiv);
+      });
+
+      document.getElementById('btn-prev-topic').style.visibility = (id === 1) ? 'hidden' : 'visible';
+      document.getElementById('btn-next-topic').style.visibility = (id === 6) ? 'hidden' : 'visible';
+
+      switchView('detail');
+    }
+
+    function navigateTopic(direction) {
+      const targetId = currentTopicId + direction;
+      if (targetId >= 1 && targetId <= 6) {
+        openTopic(targetId);
+      }
+    }
+  </script>
+</body>
+</html>
